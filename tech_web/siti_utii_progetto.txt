@@ -1,2 +1,11 @@
-API: https://developers.italia.it/it/api/muoversi-in-lombardia
+API LOMBARDIA: https://developers.italia.it/it/api/muoversi-in-lombardia
 
+API TRENITALIA(obsolete): https://github.com/TrinTragula/api-trenitalia.git
+
+API TRENITALIA(nuove): https://github.com/SimoDax/Trenitalia-API/wiki/Nuove-API-Trenitalia-lefrecce.it
+
+API GENERALI (viaggiatreno): https://github.com/Razorphyn/Informazioni-Treni-Italiani
+---
+comprende:
+tutto
+---

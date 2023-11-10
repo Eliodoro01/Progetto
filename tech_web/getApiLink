@@ -1,0 +1,12 @@
+link esempio per estrazione stazioni città:
+https://www.lefrecce.it/Channels.Website.BFF.WEB/website/locations/search?name=[NAME]&limit=[LIMIT]
+--------
+[NAME]: stringa con i caratteri della stazione, impostando nella chiamata i caratteri \\ verranno estrapolate tutte le stazioni
+[LIMIT]: numero massimo di stazioni da ritornare. Di default è 10, se omesso ritorna TUTTE quelle che corrispondono alla ricerca
+--------
+
+
+link per estrarre stazioni delle città napoli:
+https://www.lefrecce.it/Channels.Website.BFF.WEB/website/locations/search?name=napoli
+
+link generale di tutte le stazioni italiane (usare in casi d'emergenza, motivo: MERGE FATTO DA PYTHON, tuple mancanti o duplicate): https://raw.githubusercontent.com/SimoDax/Trenitalia-API/master/dump_coordinate_lefrecce.json

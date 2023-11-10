@@ -13,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2XyiXmPE2jDYoMLHmMU7zk7yzl4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nonnt66/Scaricati/uni_git/Progetto",
+    "last_opened_file_path": "/home/nonnt66/Scaricati/uni/Progetto",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699607762968</updated>
       <workItem from="1699607764534" duration="339000" />
+      <workItem from="1699623482918" duration="137000" />
     </task>
     <servers />
   </component>

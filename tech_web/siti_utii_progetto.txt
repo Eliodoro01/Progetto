@@ -1,3 +1,6 @@
+sito di riferimento (compreso di documentazione github):
+http://www.viaggiatreno.it/infomobilita/index.jsp
+
 API LOMBARDIA: https://developers.italia.it/it/api/muoversi-in-lombardia
 
 API TRENITALIA(obsolete): https://github.com/TrinTragula/api-trenitalia.git
@@ -9,3 +12,4 @@ API GENERALI (viaggiatreno): https://github.com/Razorphyn/Informazioni-Treni-Ita
 comprende:
 tutto
 ---
+

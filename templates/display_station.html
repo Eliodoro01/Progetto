@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
+    <meta name="theme-color" content="white" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function callPython() {
+       var stazione = document.getElementById("stazione").value;
+         var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://www.rfi.it/it/stazioni/"+stazione, true);
+            xhttp.send();
+    }
+</script>
+<form action="https://www.rfi.it/it/stazioni/" method="get">
+    <input type="text" name="stazione" id="stazione" oninput="callPython()">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

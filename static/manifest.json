@@ -1,0 +1,23 @@
+{
+  "name": "MetroMasters",
+  "short_name": "MM",
+  "lang": "it-IT",
+  "start_url": "login.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "#092236",
+  "icons": [
+    {
+      "src": "images/METRO_MASTERS.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/METRO_MASTERS.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

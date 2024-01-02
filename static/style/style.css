@@ -1,0 +1,115 @@
+body {
+    font-family: 'FUTURA', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Cambiato colore di sfondo */
+}
+
+header {
+    background-color: #007acc; /* Cambiato colore di sfondo */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1, h2 {
+    margin: 0;
+    color: white; /* Colore del testo corrispondente al colore di sfondo dell'header */
+    text-align: center;
+}
+
+#booking-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-top: 8px;
+}
+
+input[type="submit"], button {
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #005682;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#geolocation-buttons button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#geolocation-buttons button:hover {
+    background-color: #45a049;
+}
+
+.center{
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007acc;
+    color: white;
+    padding: 1em;
+}
+
+.bottone {
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.bottone:hover {
+    background-color: #45a049;
+}

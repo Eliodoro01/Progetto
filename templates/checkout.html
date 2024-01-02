@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
+    <meta name="theme-color" content="white" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy ticket</title>
+    <link rel="stylesheet" href="/static/style/styleBtnPagamento.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<section>
+    <div class="product">
+        <img src="https://images.pexels.com/photos/69866/pexels-photo-69866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="The cover of ticket"/>
+        <div class="description">
+            <h3>Biglietto corsa singola</h3>
+            <h5>$10.00</h5>
+        </div>
+    </div>
+    <form action="/create-checkout-session" method="POST">
+        <input type="hidden" name="price" value="price_1OHr0JJttODyNVO7Z1Z2Z2Z2"/>
+        <button type="submit" id="checkout-button">Checkout</button>
+    </form>
+</section>
+<script async
+        src="https://js.stripe.com/v3/buy-button.js">
+</script>
+</body>
+</html>

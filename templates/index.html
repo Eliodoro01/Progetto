@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
+    <meta name="theme-color" content="white" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroMasters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tt94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-E7TyQq099U279gKk93lMW2I2z960V+Jc0sY8+Qn1Fxf3K2/S1qVDmFkWj+30z0Xgg==" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url('static/images/train.jpg');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(114, 223, 230, 0.5);
+            text-align: center;
+        }
+
+        .brand-description {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0069cc;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #44a2ce;
+            color: white;
+            padding: 20px;
+            text-align: center;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header class="py-3">
+    <h1 class="text-white">MetroMasters</h1>
+</header>
+
+<section id="brand-description" class="container">
+   <!-- <h2 class="mb-4">MetroMasters</h2>-->
+    <p class="brand-description">
+        Offriamo un servizio efficiente e affidabile per conoscere gli orari dei treni di tutta Italia e acquistare le soluzioni migliori per le tue esigenze.
+    </p>
+</section>
+
+<section id="call-to-action" class="container">
+    <a href="/ricercaStazione" class="btn btn-primary">Biglietti</a>
+</section>
+
+<footer class="fixed-bottom">
+    <p>&copy; 2023 MetroMasters</p>
+</footer>
+
+</body>
+
+</html>

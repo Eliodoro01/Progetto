@@ -1,0 +1,114 @@
+
+.barraLingua
+{
+       font-size:8pt;
+       margin-right:5pt;
+       float:right;
+
+}
+
+
+.mobilescreen
+{
+
+}
+
+.widescreen
+{
+    display:none;
+}
+
+
+.focus:focus
+{
+     
+     border-color:red;
+     border:14pt;
+      
+} 
+ 
+html, body {
+   
+}
+
+body {
+    font-family:Zurich cn bt,  Arial;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    text-align: left;
+    overflow-x: hidden;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+ 
+.monitorHeader
+{
+    margin-top: 15px;
+}
+
+.errorLabel {
+    color: red;
+}
+ /*
+.rfi {
+    background-image: url("../../Resources/Images/RFI.gif");
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    min-height: 30px;
+    display: block;
+    width: 90%;
+    margin-left: 10px;
+}
+*/
+h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    margin-right: 15px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+h2 {
+    font-weight: normal;
+}
+/*
+h4, h1, h2 {
+    font-family: FuturaSerieBQ-Bold, Arial;
+}*/
+
+
+
+ 
+   
+/**ERROR PAGE************************************************/
+.error {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .error .image {
+        background-color: white;
+        min-height: 170px;
+        background-image: url("../Resources/Images/Don_t_panic.jpg");
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+    }
+/***********************************************************************************************/

@@ -73,6 +73,8 @@ body {
 .formclass input[type="radio"] {
     margin-right: 0.5rem;
     width: auto;
+    margin-bottom: 20px; /* Adjust this value as needed */
+
 }
 
 .formclass .checkLabel {
@@ -114,6 +116,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+
 }
 .image-container img {
     width: 100px; /* Modifica questo valore per cambiare la larghezza dell'immagine */
@@ -121,6 +130,6 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 15px; /* Aggiungi questa linea per smussare i bordi dell'immagine */
-
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }

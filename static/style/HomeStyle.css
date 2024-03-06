@@ -1,321 +1,126 @@
-/**HOME************************************************/
- 
-.selezionaLocalitaDiv  
-{
-    font-size: 20pt;
-    padding-top: 10pt;
-    margin-top:20pt;
-    margin-right: 0;
-    margin-left: 400pt;
-    background-color:#eeeeee;
-    width:80%;
-    height:auto;
-    margin-bottom:20pt;
-   
-   
+body {
+    background-image: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
 }
 
-
- .pulsante
-{
-    font-size: 14pt;
-    text-align:center;
-    color: white;
-    background-color:#E31936; 
-    height:20pt;
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 8px;
-    width: 150pt;
-    text-decoration: none;
-    border: none;
-    margin-left:40pt;
+.selezionaLocalitaDiv {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
 
- .kioskLabel
- {
-     margin-top:10pt;
- }
-
-.Intestazione
-{
-    font-size:20pt;
-    padding-top:25pt;
-    font-weight:bold;
-    margin-left: 15pt;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    transition: max-width 0.5s ease;
 }
 
-.Descrizione
-{
-    font-size:15pt;
-    margin-top:25pt;
-    font-weight:bold; 
-    margin-left: 15pt;
-    
+.IntestazioneAPLive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.grigio, .giallo
-{
-    
-    font-size:22pt;
-    font-weight:bold;
-    padding-top:10pt;
-    padding-bottom:10pt;
-    
-
+.errorLabel {
+    color: #dc3545;
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
 }
 
-.IntestazioneAPLive
-{
-    margin-top: 20pt;
-    margin-left: 80pt;
-    line-height: 35pt;
-
-    
-}
-.scrittaMonitor
-{
-    padding-left:10pt;
-
-    
-} 
-
-.scrittaLive
-{
-    font-style:oblique;
-    padding-right:10pt;
-     
+.formclass label,
+.formclass input,
+.formclass select {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: width 0.5s ease, margin-bottom 0.5s ease;
 }
 
-.scrittaAPLive
-{
-    
-    margin-left:-6pt;
+.formclass input[type="radio"] {
+    margin-right: 10px;
 }
 
-.grigio
-{
-    background-color:#555555;
-    color:white;
-    
-    
-}
-
-.checkLabel
-{
-    margin-left:10pt;
-}
-
-.formclass
-{
-    font-size:13pt;
-    margin-left:80pt;
-}
-
-.ricercaRadio {
-    
-    margin-top:10pt;
-}
-
-.partenzaRadio
-{
-    margin-left:30pt;
-}
-
-.ricercaCheck
-{
-     margin-top:30pt;
-     font-size:13pt;
-}
-
-.RicercaAvvia
-{
-     margin-top:30pt;
-     font-size:15pt;
-}
-.VaiMonitor
-{
-     font-size:15pt;
-     margin-top:20pt;
-     padding-bottom:20pt;
-}
-
-.giallo
-{
-    background-color:gold;
-    color:#333333;
-     
-     
-}
-
-input[type=radio] {
-transform: scale(1.5);
+.formclass .ricercaRadio {
+    display: flex;
+    align-items: center;
 }
 
 .searchText {
-    
-    font-size:13pt;
-    font-family:Arial;
-    margin-bottom:9pt;
+    margin-bottom: 10px;
 }
 
-.textWidth
-{
-    width: 400pt;
-}
-.selectWidth
-{
-    width: 403pt;
+#btnSearch {
+    width: 100%;
+    transition: width 0.5s ease;
 }
 
-.redlabel {
-    font-weight:bold;
-    color:#E31936; 
-    font-size:14pt;
-    
-   
+.VaiMonitor button[type="submit"] {
+    width: 100%;
+    transition: width 0.5s ease;
 }
 
-.labelSearch
-{
-    margin-left:10pt;
-}
-.pulsanteVisMon {
-    float: right;
-    
- }
-
- 
-
-.selezionaLocalita table {
-    margin: 0px;
-    padding: 0px;
-     
-}
- 
-fieldset {
-
-    width:55%;
-    padding: 5px;
-    margin-top: 25px;
-	
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
 }
 
-legend {
-    font-size: xx-large;
-    color: white;
-}
- 
-
-.selezionaLocalita .search,
-.selezionaLocalitaDiv .search
- {
-    margin-top: 7px;
-    margin-left: 5px;
-    display: block;
+.formclass input[type="radio"] {
+    margin-right: 0.5rem;
+    width: auto;
 }
 
-.right {
-    text-align: right;
+.formclass .checkLabel {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    display: inline-block;
+    width: auto;
 }
-.center {
+
+#call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#call-to-action .container {
     text-align: center;
 }
-.left {
-    text-align: left;
+
+.IntestazioneAPLive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/* preso da internet */
-.hidden {
-  position: absolute;
-  top: -20em;
-  left: -200em;
+.IntestazioneAPLive .text-muted {
+    color: #6c757d;
 }
 
-.wrapper {
-  height: 24px;
-  overflow: auto;
-}
-.cb {
-  margin: 20px;
-  padding: 0;
-  height: 24px;
-  display: block;
-  overflow: visible;
+.IntestazioneAPLive .text-warning {
+    color: #ffc107;
 }
 
-.cb_label {
-  margin: 0;
-  padding: 2px;
-  width: 45px;
-  font-weight: bold;
-  float: left;
-  display: inline;
-}
-.cb_edit {
-  margin: 0;
-  padding: 2px 3px;
-  width: 240px;
-  height: 18px;
-  border: 1px solid black;
-  font-size: 1em;
-  float: left;
-  display: inline;
-}
-.cb_button {
-  margin: 0;
-  padding: 0;
-  height: 24px;
-  width: 24px;
-  border: 1px solid black;
-  background-color: #999;
-  float: left;
-  display: inline;
-  text-align: center;
+#call-to-action {
+    margin-top: 20px; /* Adjust this value as needed */
 }
 
-button.cb_button img {
-  margin: 0;
-  padding: 0;
-  height: 22px;
-  width: 22px;
-  position: relative;
-  top: -1px;
-  left: -3px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.cb_list {
-  clear: both;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 49px;
-  border: 1px solid black;
-  width: 246px;
-  height: 200px;
-  overflow: auto;
-  background-color: #fff;
-  color:black;
-  position: relative;
-  z-index: 300;
-}
+.image-container img {
+    width: 100px; /* Modifica questo valore per cambiare la larghezza dell'immagine */
+    height: auto; /* Questo mantiene le proporzioni dell'immagine */
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Aggiungi questa linea per smussare i bordi dell'immagine */
 
-.cb_option {
-  margin: 0 1px 0 0;
-  padding: 2px 5px;
-}
-.selected {
-  border-top: 1px solid #44e;
-  border-bottom: 1px solid #44e;
-  padding: 1px 5px;
-  background-color: #77a;
-  color: #fff;
-}
-.cb_option:hover {
-  border-top: 1px solid #44e;
-  border-bottom: 1px solid #44e;
-  padding: 1px 5px;
-  font-weight: bold;
-  background-color: #77f;
-  color: #fff;
+
 }

@@ -186,7 +186,7 @@ def apply_reset_password(token):
 # Ticket route
 @app.route('/ticket', methods=['GET', 'POST'])
 def ticket():
-    return render_template('checkout.html')
+    return render_template('checkout2.html')
 
 
 # Create checkout session route

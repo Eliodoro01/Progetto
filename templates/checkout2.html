@@ -5,192 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MetroMasters</title>
     <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://js.stripe.com/v3/"></script>
 </head>
-<body class = "bg-light">
+<body class="bg-light">
 
 <style>
-/* Stile generale */
-body {
-font-family: Arial, sans-serif;
-}
+    /* Stile generale */
+    body {
+        font-family: Arial, sans-serif;
+    }
 
-.container {
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
-}
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-.text-center {
-text-align: center;
-}
+    .text-center {
+        text-align: center;
+    }
 
-/* Stili specifici per il form */
-.form-label {
-font-weight: bold;
-}
+    /* Stili specifici per il form */
+    .form-label {
+        font-weight: bold;
+    }
 
-.form-control {
-margin-bottom: 10px;
-}
-
-
-.card-header {
-background-color: #007bff;
-color: #fff;
-text-align: center;
-padding: 10px 0;
-}
-
-.card-body {
-text-align: center;
-}
-
-/* Stili per i bottoni */
-.btn-block {
-width: 100%;
-margin-top: 10px;
-}
-
-.btn-outline-primary {
-border-color: #007bff;
-color: #007bff;
-}
-
-.btn-outline-primary:hover {
-background-color: #007bff;
-color: #fff;
-}
+    .form-control {
+        margin-bottom: 10px;
+    }
 
 
-/* Stili per l'immagine */
-.mb-4 {
-margin-bottom: 1rem;
-}
+    .card-header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
 
-/* Stili per la separazione */
-.my-4 {
-margin-top: 2rem;
-margin-bottom: 2rem;
-}
+    .card-body {
+        text-align: center;
+    }
+
+    /* Stili per i bottoni */
+    .btn-block {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-outline-primary {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
 
 
-.form-control {
-    margin-bottom: 10px;
-    border: 2px solid #007bff; /* Bordo più spesso e colore diverso */
-    border-radius: .25rem; /* Bordo arrotondato */
-    padding: .5rem; /* Maggiore spazio interno */
-}
+    /* Stili per l'immagine */
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+
+    /* Stili per la separazione */
+    .my-4 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 
 
+    .form-control {
+        margin-bottom: 10px;
+        border: 2px solid #007bff; /* Bordo più spesso e colore diverso */
+        border-radius: .25rem; /* Bordo arrotondato */
+        padding: .5rem; /* Maggiore spazio interno */
+    }
 
+    .container img {
+        /* Inserisci qui le tue regole CSS */
+        width: 100px; /* Ad esempio, per cambiare la larghezza dell'immagine */
+        height: auto; /* Questo mantiene le proporzioni dell'immagine */
+        border-radius: 15px; /* Per smussare i bordi dell'immagine */
+    }
 
+    .col.mb-4 {
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        margin: 0px;
+        padding: 10px;
+        border-radius: 15px;
+        border: 2px solid #007bff;
+        background-color: #f8f9fa;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .card-body{
+        padding: 5px;
+        height: 245px;
+
+    }
 
 </style>
 <div class="container">
-    <div class = "py-5 text-center">
-        <img class = "mb-4 mx-auto" src = "/images/METRO_MASTERS.png" alt = "Logo" width="72" height="72">
+    <div class="py-5 text-center">
+        <img class="mb-4 mx-auto" src="/static/images/METRO_MASTERS.png" alt="Logo" width="72" height="72">
         <h2>Checkout info</h2>
         <p class="lead">Inserire le informazioni per il checkout</p>
     </div>
 </div>
 
 <div class="container">
-    <h4 class ="mb-3">Indirizzo di fatturazione</h4>
+    <h4 class="mb-3">Indirizzo di fatturazione</h4>
     <form novalidate>
-        <div class = "row g-3">
-            <div class = "col-sm-6">
-                <label for = "firstName" class = "form-label"> Nome</label>
-                <input id = "firstName" type="text" class = "form-control" placeholder="Mario" required>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label"> Nome</label>
+                <input id="firstName" type="text" class="form-control" placeholder="Mario" required>
                 <div class="invalid-feedback">
                     È richiesto un nome valido
                 </div>
             </div>
 
-            <div class = "col-sm-6">
-                <label for = "lastName" class = "form-label"> Cognome</label>
-                <input id = "lastName" type="text" class = "form-control" placeholder="Rossi" required>
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label"> Cognome</label>
+                <input id="lastName" type="text" class="form-control" placeholder="Rossi" required>
                 <div class="invalid-feedback">
                     È richiesto un cognome valido
                 </div>
             </div>
 
-            <div class = "col-12">
-                <label for = "username" class = "form-label"> Username</label>
-                <div class = "input-group">
-                    <span class ="input-group-text">@</span>
+            <div class="col-12">
+                <label for="username" class="form-label"> Username</label>
+                <div class="input-group">
+                    <span class="input-group-text">@</span>
 
-                    <input id = "username" type="text" class = "form-control" placeholder="mariorossi" required>
+                    <input id="username" type="text" class="form-control" placeholder="mariorossi" required>
                 </div>
                 <div class="invalid-feedback">
                     È richiesto un username valido
                 </div>
             </div>
 
-                <div class ="col-md-4">
-                    <label for = "region" class = "form-label"> Regione</label>
+            <div class="col-md-4">
+                <label for="region" class="form-label"> Regione</label>
 
-                        <select id = "region" class = "form-control" >
-                            <option value =""> Scegli...</option>
-                            <option value ="Campania"> Campania</option>
-                            <option value ="Lombardia"> Lombardia</option>
-                            <option value ="Lazio"> Lazio</option>
-                            <option value ="Calabria"> Calabria</option>
-                        </select>
+                <select id="region" class="form-control">
+                    <option value=""> Scegli...</option>
+                    <option value="Campania"> Campania</option>
+                    <option value="Lombardia"> Lombardia</option>
+                    <option value="Lazio"> Lazio</option>
+                    <option value="Calabria"> Calabria</option>
+                </select>
 
-                    <div class="invalid-feedback">
-                        È richiesta una regione valida
-                    </div>
+                <div class="invalid-feedback">
+                    È richiesta una regione valida
                 </div>
+            </div>
 
-            <div class = "col-4">
-                <label for = "adress" class = "form-label"> Indirizzo</label>
-                <div class = "input-group">
+            <div class="col-4">
+                <label for="adress" class="form-label"> Indirizzo</label>
+                <div class="input-group">
 
-                    <input id = "adress" type="text" class = "form-control" placeholder="Via Roma" required>
+                    <input id="adress" type="text" class="form-control" placeholder="Via Roma" required>
                 </div>
                 <div class="invalid-feedback">
                     È richiesto un indirizzo valido
                 </div>
             </div>
 
-            <div class = "col-4">
-                <label for = "cap" class = "form-label"> CAP</label>
-                <div class = "input-group">
+            <div class="col-4">
+                <label for="cap" class="form-label"> CAP</label>
+                <div class="input-group">
 
-                    <input id = "cap" type="text" class = "form-control" placeholder="80058" required>
+                    <input id="cap" type="text" class="form-control" placeholder="80058" required>
                 </div>
                 <div class="invalid-feedback">
                     È richiesto un CAP valido
                 </div>
             </div>
 
-            <div class = "form-check">
-                <input id = "saveinfo" type="checkbox" class ="form-check-input">
-                <label class = "form-check-label" for = "saveinfo"> Salva informazioni</label>
+            <div class="form-check">
+                <input id="saveinfo" type="checkbox" class="form-check-input">
+                <label class="form-check-label" for="saveinfo"> Salva informazioni</label>
             </div>
 
-            <hr class = "my-4">
+            <hr class="my-4">
 
-            <div class = "container text-center">
+            <div class="container text-center">
                 <div class="row row-cols-1 row-cols-md-3">
                     <div class="col mb-4">
-                        <div class ="card shadow-lg">
+                        <div class="card shadow-lg">
                             <div class="card-header">
                                 <h1>5€</h1>
                             </div>
                             <div class="card-body">
-                                <h4 class = "my-0 font-weight-normal">
-                                    <small class ="text-muted"> Corsa singola</small>
+                                <h4 class="my-0 font-weight-normal">
+                                    <small class="text-muted"> Corsa singola</small>
                                 </h4>
-                                <ul class ="list-unstyled mt-3 mb-4" >
+                                <ul class="list-unstyled mt-3 mb-4">
                                     <li>Valido per una sola corsa</li>
                                     <li>Valido per un solo mese dall'acquisto</li>
                                 </ul>
                                 <form action="/create-checkout-session" method="POST">
                                     <input type="hidden" name="price" value="price_1OHr0JJttODyNVO7Z1Z2Z2Z2"/>
-                                    <button type="submit" id="checkout-button1" class="btn btn-outline-primary btn-block">  Vai al pagamento</button>
+                                    <button type="submit" id="checkout-button1"
+                                            class="btn btn-outline-primary btn-block"> Vai al pagamento
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -198,21 +220,23 @@ margin-bottom: 2rem;
 
 
                     <div class="col mb-4">
-                        <div class ="card shadow-lg">
+                        <div class="card shadow-lg">
                             <div class="card-header">
                                 <h1>10€</h1>
                             </div>
                             <div class="card-body">
-                                <h4 class = "my-0 font-weight-normal">
-                                    <small class ="text-muted"> Abbonamento mensile</small>
+                                <h4 class="my-0 font-weight-normal">
+                                    <small class="text-muted"> Abbonamento mensile</small>
                                 </h4>
-                                <ul class ="list-unstyled mt-3 mb-4" >
-                                    <li>Valido per un massimo di 4 corse al giorno </li>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Valido per un massimo di 4 corse al giorno</li>
                                     <li>Valido per un solo mese dall'acquisto</li>
                                 </ul>
                                 <form action="/create-checkout-session" method="POST">
                                     <input type="hidden" name="price" value="price_1OHr0JJttODyNVO7Z1Z2Z2Z2"/>
-                                    <button type="submit" id="checkout-button2" class="btn btn-outline-primary btn-block">  Vai al pagamento</button>
+                                    <button type="submit" id="checkout-button2"
+                                            class="btn btn-outline-primary btn-block"> Vai al pagamento
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -220,21 +244,23 @@ margin-bottom: 2rem;
 
 
                     <div class="col mb-4">
-                        <div class ="card shadow-lg">
+                        <div class="card shadow-lg">
                             <div class="card-header">
                                 <h1>10€</h1>
                             </div>
                             <div class="card-body">
-                                <h4 class = "my-0 font-weight-normal">
-                                    <small class ="text-muted"> Abbonamento mensile</small>
+                                <h4 class="my-0 font-weight-normal">
+                                    <small class="text-muted"> Abbonamento mensile</small>
                                 </h4>
-                                <ul class ="list-unstyled mt-3 mb-4" >
-                                    <li>Valido per un massimo di 4 corse al giorno </li>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Valido per un massimo di 4 corse al giorno</li>
                                     <li>Valido per un solo mese dall'acquisto</li>
                                 </ul>
                                 <form action="/create-checkout-session" method="POST">
                                     <input type="hidden" name="price" value="price_1OHr0JJttODyNVO7Z1Z2Z2Z2"/>
-                                    <button type="submit" id="checkout-button3" class="btn btn-outline-primary btn-block">  Vai al pagamento</button>
+                                    <button type="submit" id="checkout-button3"
+                                            class="btn btn-outline-primary btn-block"> Vai al pagamento
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -243,15 +269,55 @@ margin-bottom: 2rem;
             </div>
 
 
-
         </div>
 
     </form>
 </div>
+<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+</div>
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+<script>
+    document.getElementById("checkout-button1").addEventListener("mouseover", function() {
+        this.innerHTML = "➡";
+        this.style.opacity = "1";
+    });
+
+    document.getElementById("checkout-button1").addEventListener("mouseout", function() {
+        this.innerHTML = "Vai al pagamento";
+        this.style.opacity = "1";
+    });
+
+    document.getElementById("checkout-button2").addEventListener("mouseover", function() {
+        this.innerHTML = "➡";
+        this.style.opacity = "1";
+    });
+
+    document.getElementById("checkout-button2").addEventListener("mouseout", function() {
+        this.innerHTML = "Vai al pagamento";
+        this.style.opacity = "1";
+    });
+
+    document.getElementById("checkout-button3").addEventListener("mouseover", function() {
+        this.innerHTML = "➡";
+        this.style.opacity = "1";
+    });
+
+    document.getElementById("checkout-button3").addEventListener("mouseout", function() {
+        this.innerHTML = "Vai al pagamento";
+        this.style.opacity = "1";
+    });
+
+</script>
 </body>
 </html>

@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f238e49b-d1ba-4ce7-a547-63125c335f41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ArrivalsDepartures.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ArrivalsDepartures.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/checkout2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/checkout2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registrazione.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registrazione.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +56,7 @@
       <workItem from="1700214699411" duration="385000" />
       <workItem from="1709679648623" duration="2709000" />
       <workItem from="1709682371296" duration="1272000" />
-      <workItem from="1709767745931" duration="3189000" />
+      <workItem from="1709767745931" duration="3490000" />
     </task>
     <servers />
   </component>

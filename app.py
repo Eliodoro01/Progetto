@@ -77,7 +77,7 @@ def login():
 def logout():
     # Remove user from the session to log out
     session.pop('user', None)
-    return render_template('index.html')
+    return render_template('login.html')
 
 
 # Signup route
@@ -205,8 +205,8 @@ def create_checkout_session():
             mode='payment',
             success_url=YOUR_DOMAIN + '/success',
             cancel_url=YOUR_DOMAIN + '/cancel',
-#             success_url= 'https://m2q2ls8m-5000.euw.devtunnels.ms/success',
-#             cancel_url= 'https://m2q2ls8m-5000.euw.devtunnels.ms/cancel',
+            #             success_url= 'https://m2q2ls8m-5000.euw.devtunnels.ms/success',
+            #             cancel_url= 'https://m2q2ls8m-5000.euw.devtunnels.ms/cancel',
         )
     except Exception as e:
         return str(e)
@@ -238,6 +238,7 @@ def display_station():
 def ricerca_stazione():
     return render_template('ArrivalsDepartures.html')
 
+
 @app.route('/sw')
 def sw():
     return send_from_directory('static', 'sw.js')
@@ -246,4 +247,3 @@ def sw():
 # Run the application
 if __name__ == '__main__':
     app.run(debug=True)
-
